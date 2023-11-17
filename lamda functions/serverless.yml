@@ -1,0 +1,24 @@
+org: piyushbhawsar
+app: aws-http-api
+service: youtube-api
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-south-1
+
+functions:
+  youtubeHelloFn:
+    handler: hello.abcHandler
+    events:
+      - httpApi:
+          path: /
+          method: get
+  byeFn:
+    handler: bye.handler
+    events:
+      - httpApi:
+          path: /bye
+          method: get
+
