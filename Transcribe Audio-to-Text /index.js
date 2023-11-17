@@ -1,7 +1,5 @@
-// Import the required modules.
 const openai = require('openai');
 const fs = require('fs');
-// Load environment variables from a .env file.
 require('dotenv').config();
 
 /**
